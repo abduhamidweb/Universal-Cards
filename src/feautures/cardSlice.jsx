@@ -1,10 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit'
-const initilaValue = {
+const initialState = {
   like: false,
 }
 export const cardSlice = createSlice({
   name: 'card',
-  initilaValue,
+  initialState,
   reducers: {
     like: (state) => {
       state.like = state.like ? false : true

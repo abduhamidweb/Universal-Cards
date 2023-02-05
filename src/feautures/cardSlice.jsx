@@ -6,10 +6,10 @@ export const cardSlice = createSlice({
   name: 'card',
   initialState,
   reducers: {
-    like: (state) => {
+    likes: (state) => {
       state.like = state.like ? false : true
     },
   },
 })
-export const { like } = cardSlice.actions
+export const { likes } = cardSlice.actions
 export default cardSlice.reducer

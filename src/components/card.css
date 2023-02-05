@@ -1,0 +1,17 @@
+.card__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease;
+  transform:  translate(5s);
+}
+.card i{
+    font-size: 100px;
+    cursor: pointer;
+}

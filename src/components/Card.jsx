@@ -1,9 +1,9 @@
 import React from 'react'
 import './card.css'
 import { useSelector, useDispatch } from 'react-redux'
-import { likes } from '../feautures/cardSlice'
+import { likes, i12, i22, i32, i42, i52 } from '../feautures/cardSlice'
 const Card = () => {
-    const {like} = useSelector((state) => state.counter)
+  const { like, i1, i2, i3, i4, i5 } = useSelector((state) => state.counter)
   const dispatch = useDispatch()
   function handlerLike() {
     dispatch(likes())
@@ -11,12 +11,47 @@ const Card = () => {
   return (
     <>
       <div className='card__wrapper'>
-        <div className='card' onClick={handlerLike}>
-          {like ? (
-            <i class='bi bi-heart-fill'></i>
-          ) : (
-            <i class='bi bi-heart'></i>
-          )}
+        <div className='card '>
+          <span
+            onClick={() => {
+              dispatch(i12())
+            }}
+          >
+            🤤
+          </span>
+          <span>{i1}</span>
+          <span
+            onClick={() => {
+              dispatch(i22())
+            }}
+          >
+            😎
+          </span>
+          <span>{i2}</span>
+          <span
+            onClick={() => {
+              dispatch(i32())
+            }}
+          >
+            🙏
+          </span>
+          <span>{i3}</span>
+          <span
+            onClick={() => {
+              dispatch(i42())
+            }}
+          >
+            😱
+          </span>
+          <span>{i4}</span>
+          <span
+            onClick={() => {
+              dispatch(i52())
+            }}
+          >
+            🥳
+          </span>
+          <span>{i5}</span>
         </div>
       </div>
     </>
